@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Für Melina 💌</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+        body {
+            background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+            font-family: 'Nanum Pen Script', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .envelope {
+            background: white;
+            border: 3px solid #ffb6c1;
+            padding: 30px;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        .letter {
+            white-space: pre-wrap;
+            font-size: 24px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .heart {
+            text-align: center;
+            font-size: 30px;
+            margin-top: 20px;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="envelope">
+        <div class="letter" id="letter"></div>
+        <div class="heart">💖💗💞</div>
+    </div>
+
+    <script>
+        const text = `[Es sind schon 8 Monate vergangen, seit wir uns kennengelernt haben😳 Es fühlt sich irgendwie noch länger an, haha.
+Die letzten 8 Monate, in denen wir jeden Tag miteinander gesprochen haben, waren wirklich so glücklich für mich☺️
+Wenn ich mit dir spreche, bin ich aufgeregt, aber auf eine seltsame Weise auch ruhig und ich muss ständig lächeln.
+Dieses Gefühl habe ich nur bei dir. Es ist irgendwie magisch, haha. Es ist ein langer Brief, aber mein Herz steckt komplett darin📩 Nimm dir ruhig Zeit beim Lesen💖
+Es ist mir ein bisschen peinlich, aber heute möchte ich dir ein paar schöne Dinge über dich sagenㅎㅎ
+
+✅ Auch wenn ich manchmal komisch oder unbeholfen bin, bist du immer liebevoll und sprichst mit mir.
+✅ Du bist sanft, warm, süß und ehrlich. Du bist wie ein kleiner Hund, einfach heilend 🐶
+✅ Du lernst fleißig in der Schule, hilfst jeden Tag deinen Eltern und versuchst, ein guter Mensch zu sein – das finde ich bewundernswert.
+✅ Ich liebe es auch, wie du als Otaku begeistert über deine Lieblingssachen sprichst.
+✅ Und obwohl du manchmal sarkastisch bistㅎㅎ, ist es ehrlich gesagt witzig und diese Seite von dir ist auch super süß und liebenswert🤭
+
+Eigentlich gibt es noch viel mehr, aber heute erstmal nur so viel!🤫
+Wenn ich bei dir bin, fühle ich mich am meisten wie ich selbst.
+Ehrlich gesagt, glaube ich sogar, dass ich bei dir süßer bin als sonst 👉🏻👈🏻
+Vor dir werde ich automatisch ehrlich und lieb☺️
+Vielleicht, weil du mich immer so warmherzig und liebevoll behandelst, dass ich mich dir öffnen kann💖 Danke dir dafür💞
+Ich habe leider kein richtiges Geschenk vorbereitet, aber ich schicke dir stattdessen diesen Gutschein💝
+Ich habe überlegt, was ich dir in meiner jetzigen Situation schenken kann…
+Es ist etwas kindisch, aber mir ist diese Idee eingefallenㅎㅎ
+Wenn du dir etwas wünschst – egal wie lange es dauert oder wie schwer es ist – ich werde es erfüllen.
+Alles Gute zum Geburtstag 🎂💖 Ich liebe dich von ganzem Herzen, meine Melina 🥰]`;
+
+        let i = 0;
+        const speed = 40;
+        const letterBox = document.getElementById("letter");
+
+        function typeWriter() {
+            if (i < text.length) {
+                letterBox.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        typeWriter();
+    </script>
+</body>
+</html>
